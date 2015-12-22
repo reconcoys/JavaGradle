@@ -1,6 +1,3 @@
-ext {
-    buildVersion = 'local'
-}
 
 buildscript {
     repositories {
