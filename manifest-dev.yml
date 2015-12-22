@@ -1,0 +1,7 @@
+applications:
+-   disk_quota: 512M
+    host: helloworld
+    name: helloworld
+    path: ./build/libs/HelloWorld-0.0.local.jar
+    instances: 2
+    memory: 512M
