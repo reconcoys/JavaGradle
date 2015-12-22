@@ -9,13 +9,9 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'org.akhikhl.gretty'
+apply plugin: 'application'
 
-gretty {
-    port = 8080
-    contextPath = '/'
-    servletContainer = 'jetty9'
-}
+mainClassName = "com.pillar.ServerStart"
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -26,6 +22,11 @@ repositories {
 
 dependencies {
     compile (
+            'org.eclipse.jetty:jetty-server:9.0.0.RC2',
+            'org.eclipse.jetty:jetty-servlet:9.0.0.RC2',
+            'org.apache.tomcat:tomcat-catalina:7.0.41',
+            'org.apache.tomcat:tomcat-util:7.0.41',
+            'org.apache.tomcat.embed:tomcat-embed-core:7.0.41',
             'org.springframework:spring-webmvc:4.1.5.RELEASE'
     )
     providedCompile(
@@ -35,4 +36,10 @@ dependencies {
             'junit:junit:4.12',
             'org.springframework:spring-test:4.1.5.RELEASE'
     )
+}
+
+war {
+    manifest {
+        attributes 'Main-Class': 'com.pillar.ServerStart'
+    }
 }
