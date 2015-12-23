@@ -11,7 +11,7 @@ public class TestHelloWorld {
     @Test
     public void pillarWorldTest() {
         String pillarTest = pillarWorld.pillar("pillar");
-        Assert.assertEquals("pillarTST", pillarTest);
+        Assert.assertEquals("pillarTEST", pillarTest);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class TestHelloWorld {
     @Test
     public void pillarWorld2Test() {
         String pillarTest = pillarWorld.pillar("pillar");
-        Assert.assertEquals("pillarTST", pillarTest);
+        Assert.assertEquals("pillarTEST", pillarTest);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class TestHelloWorld {
     @Test
     public void pillarWorld4Test() {
         String pillarTest = pillarWorld.pillar("pillar");
-        Assert.assertEquals("pillarTST", pillarTest);
+        Assert.assertEquals("pillarTEST", pillarTest);
     }
 
     @Test
